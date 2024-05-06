@@ -2386,37 +2386,49 @@
 																		name="service-options">
 																		<option value="">Seleccione un servicio...
 																		</option>
-																		<option value="consultoria">Facial | Limpieza
+																		<option value="Facial | Limpieza
+																		profunda">Facial | Limpieza
 																			profunda</option>
-																		<option value="consultoria">Facial | Facial para
+																		<option value="Facial | Facial para
+																		Acné">Facial | Facial para
 																			Acné</option>
-																		<option value="consultoria">Facial | Facial Piel
+																		<option value="Facial | Facial Piel
+																		Sensible">Facial | Facial Piel
 																			Sensible</option>
-																		<option value="consultoria">Facial | Hidratación
+																		<option value="Facial | Hidratación
+																		Profunda">Facial | Hidratación
 																			Profunda</option>
-																		<option value="consultoria">Facial | Antimanchas
+																		<option value="Facial | Antimanchas">Facial | Antimanchas
 																		</option>
-																		<option value="consultoria">Facial | Antiedad
+																		<option value="Facial | Antiedad">Facial | Antiedad
 																		</option>
-																		<option value="consultoria">Facial | Facial Plus
+																		<option value="Facial | Facial Plus
+																		Lifting">Facial | Facial Plus
 																			Lifting</option>
-																		<option value="consultoria">Facial | Facial
+																		<option value="Facial | Facial
+																		Lifting para Caballero">Facial | Facial
 																			Lifting para Caballero</option>
-																		<option value="consultoria">Comporal |
+																		<option value="Comporal |
+																		Tratamiento Perfilante">Comporal |
 																			Tratamiento Perfilante</option>
-																		<option value="consultoria">Comporal | Silueta
+																		<option value="Comporal | Silueta
+																		Definida">Comporal | Silueta
 																			Definida</option>
-																		<option value="consultoria">Comporal | Anti -
+																		<option value="Comporal | Anti -
+																		Estrías">Comporal | Anti -
 																			Estrías</option>
-																		<option value="consultoria">Comporal | Anti -
+																		<option value="Comporal | Anti -
+																		Celulitis">Comporal | Anti -
 																			Celulitis</option>
-																		<option value="consultoria">Comporal |
+																		<option value="Comporal |
+																		Reafirmante de mamas y glúteos">Comporal |
 																			Reafirmante de mamas y glúteos</option>
-																		<option value="consultoria">Comporal | Piernas
+																		<option value="Comporal | Piernas
+																		Cansadas">Comporal | Piernas
 																			Cansadas</option>
-																		<option value="consultoria">Comporal | Drenaje
+																		<option value="Comporal | Drenaje
+																		Linfático">Comporal | Drenaje
 																			Linfático</option>
-																		<option value="consultoria">Otro</option>
 																		<!-- Agrega más opciones según sea necesario -->
 																	</select>
 																</span>
@@ -2428,6 +2440,15 @@
 																		class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
 																		aria-required="true"
 																		placeholder="Hora de la cita">
+																</span>
+															</div>
+															<div class="qodef-newsletter-form-input" style="padding-top: 45px;">
+																<span class="wpcf7-form-control-wrap"
+																	data-name="your-date">
+																	<input type="date" name="your-date"
+																		class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+																		aria-required="true"
+																		placeholder="Día de la cita">
 																</span>
 															</div>
 															<style>
@@ -2451,16 +2472,28 @@
 																	width: 100%;
 																	/* Ancho completo para alinearse con otros elementos */
 																}
+
+																input[type="date"] {
+																	appearance: none;
+																	/* Desactiva los estilos predeterminados del navegador */
+																	background-color: white;
+																	/* Fondo blanco */
+																	border: 1px solid #ccc;
+																	/* Borde consistente con otros campos */
+																	padding: 8px 10px;
+																	/* Acolchado similar a otros campos */
+																	font-family: 'Roboto', sans-serif;
+																	/* La misma familia de fuentes */
+																	font-size: 16px;
+																	/* Tamaño de texto igual que otros campos */
+																	border-top: #000000;
+																	border-left: #000000;
+																	border-right: #000000;
+																	border-color: gray;
+																	width: 100%;
+																	/* Ancho completo para alinearse con otros elementos */
+																}
 															</style>
-															<div class="qodef-newsletter-form-textarea">
-																<span class="wpcf7-form-control-wrap"
-																	data-name="your-message"><textarea cols="40"
-																		rows="4"
-																		class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
-																		aria-required="true" aria-invalid="false"
-																		placeholder="Observaciones, comentarios, dudas..."
-																		name="your-message"></textarea></span>
-															</div>
 															<div class="qodef-newsletter-form-submit">
 																<button onclick="sendWhatsAppMessage()"
 																	style="background-color: #4e897d;"
@@ -2477,24 +2510,24 @@
 											function sendWhatsAppMessage() {
 												const name = document.querySelector('input[name="your-name"]').value.trim();
 												const service = document.querySelector('select[name="service-options"]').value;
-												const message = document.querySelector('textarea[name="your-message"]').value.trim();
+												const date = document.querySelector('input[name="your-date"]').value;
 												const rawTime = document.querySelector('input[name="your-time"]').value;
-    const time = formatTime(rawTime);
+    											const time = formatTime(rawTime);
 
 												// Verifica que todos los campos necesarios estén llenos
-												if (!name || !service || !time || !message) {
+												if (!name || !service || !time || !date) {
 													alert('Por favor, completa todos los campos.');
 													return; // Detiene la función si algún campo está vacío
 												}
 
 												// Construye el mensaje
-												const whatsappMessage = `Hola! Me interesa adquirir sus servicios. Mi nombre es ${name}.\n\n*Servicio deseado:* ${service}.\n*Hora deseada:* ${time}.\n*Mensaje:* ${message}\n\nQuedo al pendiente ante respuesta de disposición e informes.`;
+												const whatsappMessage = `Hola! Mi nombre es ${name}.\n\nQuiero agendar el servicio de *${service}.* De ser posible el día *${date}* a las *${time}.*\n\nQuedo al pendiente ante respuesta de disponibilidad e informes.`;
 
 												// Codifica el mensaje para la URL
 												const encodedMessage = encodeURIComponent(whatsappMessage);
 
 												// Reemplaza 'YOUR_PHONE_NUMBER' con tu número de WhatsApp
-												const whatsappUrl = `https://api.whatsapp.com/send?phone=+525551886501&text=${encodedMessage}`;
+												const whatsappUrl = `https://api.whatsapp.com/send?phone=+525578671227&text=${encodedMessage}`;
 
 												// Abre WhatsApp Web o la app de WhatsApp en el dispositivo móvil
 												window.open(whatsappUrl, '_blank');
