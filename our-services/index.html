@@ -1380,62 +1380,78 @@
 									.carousel {
 										display: flex;
 										overflow-x: auto;
-										align-items: stretch; /* Asegura que todos los elementos se estiren para igualar la altura del elemento más alto */
+										align-items: stretch;
+										/* Asegura que todos los elementos se estiren para igualar la altura del elemento más alto */
 									}
-								
+
 									.carousel .elementor-column {
-										flex: 0 0 100%; /* Las columnas ocuparán todo el ancho en pantallas pequeñas */
-										box-sizing: border-box; /* Incluye padding y border en el cálculo del width */
-										margin-left: 10px; /* Menor espaciado entre columnas para pantallas pequeñas */
+										flex: 0 0 100%;
+										/* Las columnas ocuparán todo el ancho en pantallas pequeñas */
+										box-sizing: border-box;
+										/* Incluye padding y border en el cálculo del width */
+										margin-left: 10px;
+										/* Menor espaciado entre columnas para pantallas pequeñas */
 										display: flex;
-										flex-direction: column; /* Orienta los contenidos de la columna verticalmente */
+										flex-direction: column;
+										/* Orienta los contenidos de la columna verticalmente */
 									}
 
 									@media (min-width: 600px) {
 										.carousel .elementor-column {
-											flex: 0 0 50%; /* Dos columnas en pantallas medianas */
-											margin-left: 15px; /* Ajusta el margen para pantallas medianas */
+											flex: 0 0 50%;
+											/* Dos columnas en pantallas medianas */
+											margin-left: 15px;
+											/* Ajusta el margen para pantallas medianas */
 										}
 									}
 
 									@media (min-width: 900px) {
 										.carousel .elementor-column {
-											flex: 0 0 33.33%; /* Tres columnas en pantallas grandes */
+											flex: 0 0 33.33%;
+											/* Tres columnas en pantallas grandes */
 										}
 									}
 
 									@media (min-width: 1200px) {
 										.carousel .elementor-column {
-											flex: 0 0 25%; /* Cuatro columnas en pantallas muy grandes */
-											margin-left: 25px; /* Restablece el margen original para pantallas grandes */
+											flex: 0 0 25%;
+											/* Cuatro columnas en pantallas muy grandes */
+											margin-left: 25px;
+											/* Restablece el margen original para pantallas grandes */
 										}
 									}
-								
+
 									.qodef-m-content p {
-										white-space: normal; /* Permite que el texto ajuste según el contenedor */
+										white-space: normal;
+										/* Permite que el texto ajuste según el contenedor */
 										overflow: hidden;
 										text-overflow: ellipsis;
 										display: -webkit-box;
-										-webkit-line-clamp: 2; /* Limita el texto a dos líneas */
+										-webkit-line-clamp: 2;
+										/* Limita el texto a dos líneas */
 										-webkit-box-orient: vertical;
 									}
-								
+
 									.elementor-widget-container {
-										flex-grow: 1; /* Permite que el contenedor crezca para llenar el espacio disponible */
+										flex-grow: 1;
+										/* Permite que el contenedor crezca para llenar el espacio disponible */
 										display: flex;
-										flex-direction: column; /* Asegura que el contenido interno también siga un flujo vertical */
-										justify-content: space-between; /* Distribuye el espacio de manera uniforme */
+										flex-direction: column;
+										/* Asegura que el contenido interno también siga un flujo vertical */
+										justify-content: space-between;
+										/* Distribuye el espacio de manera uniforme */
 									}
-								
+
 									.qodef-m-content {
 										padding: 10px;
 									}
-								
+
 									.qodef-m-content p {
-										font-size: 14px; /* Tamaño de fuente unificado */
+										font-size: 14px;
+										/* Tamaño de fuente unificado */
 									}
 								</style>
-								
+
 								<section style="padding-top: 80px; padding-bottom: 80px;">
 									<div class="carousel">
 										<div class="elementor-column elementor-col-30 elementor-top-column elementor-element elementor-element-acb25d8"
@@ -1463,9 +1479,12 @@
 																	<p>Ampolleteria</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Limpieza Profunda', '2 hrs')"
+																	style="background-color: #4e897d;"
+																	class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																	href="javascript:void(0);"> <span
+																		class="qodef-m-text">Agendar</span>
+																</a>
 																</div>
 															</div>
 														</div>
@@ -1499,9 +1518,12 @@
 																	<p>Favorece la disminución de acné</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Facial para acné', '2 hrs')"
+																	style="background-color: #4e897d;"
+																	class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																	href="javascript:void(0);"> <span
+																		class="qodef-m-text">Agendar</span>
+																</a>
 																</div>
 															</div>
 														</div>
@@ -1533,9 +1555,12 @@
 																	<p>Irritación por quemaduras (sol)</p><br>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Facial piel sensible', '1 hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1567,9 +1592,12 @@
 																	<p>Sensación áspera o con falta de vitalidad</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Hidratación Profunda', '1 hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1600,9 +1628,12 @@
 																	<p>Pieles pigmentadas y Oscurecidas</p><br><br>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Facial antimanchas', '1 hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1630,12 +1661,16 @@
 																	</div>
 																</div>
 																<div class="qodef-m-content" style="font-size: 15px;">
-																	<p>Ideal para líneas de expresión arrugas y flacidez de la piel</p><br>
+																	<p>Ideal para líneas de expresión arrugas y flacidez
+																		de la piel</p><br>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Facial antiedad', '1 hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1663,13 +1698,17 @@
 																	</div>
 																</div>
 																<div class="qodef-m-content" style="font-size: 15px;">
-																	<p>Trabaja líneas de expresión, arrugas y flacidez</p>
+																	<p>Trabaja líneas de expresión, arrugas y flacidez
+																	</p>
 																	<p>Aclara el tono de la piel</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Facial plus lifting', '1 hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1697,12 +1736,16 @@
 																	</div>
 																</div>
 																<div class="qodef-m-content" style="font-size: 15px;">
-																	<p>Disminuye arrugas y envejecimiento cronológico.</p><br>
+																	<p>Disminuye arrugas y envejecimiento cronológico.
+																	</p><br>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Facial lifting para caballero', '1 hr')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1710,7 +1753,8 @@
 												</div>
 											</div>
 										</div>
-										<div style="margin-right: 25px;" class="elementor-column elementor-col-30 elementor-top-column elementor-element elementor-element-acb25d8"
+										<div style="margin-right: 25px;"
+											class="elementor-column elementor-col-30 elementor-top-column elementor-element elementor-element-acb25d8"
 											data-id="acb25d8" data-element_type="column">
 											<div class="elementor-widget-wrap elementor-element-populated">
 												<div class="elementor-element elementor-element-b95efad elementor-widget elementor-widget-dermaclear_core_pricing_table"
@@ -1735,9 +1779,12 @@
 																	<p>Aclara el tono de la piel</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Facial | Tratamiento para manos pigmentadas', '90 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1747,9 +1794,7 @@
 										</div>
 									</div>
 								</section>
-								<section
-									style="padding-bottom: 80px;"
-									data-id="ae94559" data-element_type="section">
+								<section style="padding-bottom: 80px;" data-id="ae94559" data-element_type="section">
 									<div class="elementor-container elementor-column-gap-default">
 										<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3f87b5d"
 											data-id="3f87b5d" data-element_type="column">
@@ -1784,9 +1829,7 @@
 										</div>
 									</div>
 								</section>
-								<section
-									style="padding-bottom: 80px;"
-									data-id="ba05aa6" data-element_type="section">
+								<section style="padding-bottom: 80px;" data-id="ba05aa6" data-element_type="section">
 									<div class="elementor-container elementor-column-gap-default">
 										<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e5c7017"
 											data-id="e5c7017" data-element_type="column">
@@ -1836,10 +1879,158 @@
 																	<p>Elimina toxinas</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Corporal | Tratamiento perfilante', '1hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
+																<!-- Modal -->
+																<div id="appointmentModal"
+																	style="border-radius: 20px; display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5);">
+																	<div
+																		style="background-color:white; margin:10% auto; padding:20px; width:50%; border-radius: 20px;">
+																		<h2>Agendar Servicio</h2>
+																		<form id="appointmentForm">
+																			<div class="form-column">
+																				<label for="date">Fecha:</label>
+																				<input style="margin-top: 10px;"
+																					type="date" id="date" name="date"
+																					required>
+																			</div>
+
+																			<div class="form-column">
+																				<label for="time">Hora:</label>
+																				<input style="margin-top: 10px;"
+																					type="time" id="time" name="time"
+																					required>
+																			</div>
+
+																			<div
+																				style="display: flex; justify-content: space-between; margin-top: 20px;">
+																				<input
+																					style="background-color: #4e897d; font-weight: bold; color: white; border-color: transparent; padding: 10px;"
+																					type="button" value="Agendar"
+																					onclick="scheduleAppointment()">
+																				<input
+																					style="background-color: #4e897d; font-weight: bold; color: white; border-color: transparent; padding: 10px;"
+																					type="button" value="Cerrar"
+																					onclick="closeModal()">
+																			</div>
+																		</form>
+																		<style>
+																			input[type="time"] {
+																				appearance: none;
+																				/* Desactiva los estilos predeterminados del navegador */
+																				background-color: white;
+																				/* Fondo blanco */
+																				border: 1px solid #ccc;
+																				/* Borde consistente con otros campos */
+																				padding: 8px 10px;
+																				/* Acolchado similar a otros campos */
+																				font-family: 'Roboto', sans-serif;
+																				/* La misma familia de fuentes */
+																				font-size: 16px;
+																				/* Tamaño de texto igual que otros campos */
+																				border-top: #000000;
+																				border-left: #000000;
+																				border-right: #000000;
+																				border-color: gray;
+																				width: 100%;
+																				/* Ancho completo para alinearse con otros elementos */
+																			}
+
+																			.form-column {
+																				display: flex;
+																				flex-direction: column;
+																				justify-content: center;
+																				/* Centra el contenido verticalmente */
+																				align-items: flex-start;
+																				/* Alinea el contenido a la izquierda */
+																				margin-bottom: 10px;
+																				/* Espacio adicional si es necesario */
+																			}
+
+																			.form-column label {
+																				margin-bottom: 5px;
+																				/* Espacio entre la etiqueta y el input */
+																			}
+
+																			#appointmentForm {
+																				display: flex;
+																				/* Usa flexbox para el diseño */
+																				flex-wrap: wrap;
+																				/* Permite que los elementos se envuelvan si no hay suficiente espacio */
+																				justify-content: space-between;
+																				/* Espacia los elementos uniformemente */
+																				align-items: center;
+																				/* Alinea los elementos verticalmente */
+																				max-width: 500px;
+																				/* Un ancho máximo para el formulario */
+																				margin: auto;
+																				/* Centra el formulario en la página */
+																			}
+
+																			#appointmentForm div {
+																				width: 100%;
+																				/* Asegura que los botones ocupen todo el espacio cuando están en una fila */
+																			}
+
+																			input[type="button"] {
+																				margin-right: 10px;
+																				/* Espacio entre los botones */
+																			}
+																		</style>
+																	</div>
+																</div>
+
+																<script>
+
+																	var currentServiceName = '';
+																	var currentServiceDuration = '';
+
+																	function openModal(serviceName, serviceDuration) {
+																		currentServiceName = serviceName;
+																		currentServiceDuration = serviceDuration;
+																		document.getElementById('appointmentModal').style.display = 'block';
+																	}
+
+																	function closeModal() {
+																		document.getElementById('appointmentModal').style.display = 'none';
+																	}
+																	function scheduleAppointment() {
+																		const date = document.getElementById('date').value;
+																		const rawTime = document.getElementById('time').value;
+    const time = formatTime(rawTime);
+
+																		if (!date || !time) {
+																			alert('Por favor, completa todos los campos.');
+																			return;
+																		}
+
+																		const message = `Hola! Me interesa adquirir su servicio de *${currentServiceName}* que tiene una duración de ${currentServiceDuration}.\n\nQuisiera agendarlo para el día *${date}* a las *${time}*. Quedo al pendiente ante respuesta de disponibilidad e informes. `;
+																		const encodedMessage = encodeURIComponent(message);
+																		const whatsappNumber = "+525578671227";
+																		const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+
+																		window.open(whatsappUrl, '_blank');
+																		closeModal(); // Cierra el modal después de enviar el mensaje
+																	}
+
+																	function formatTime(timeValue) {
+    const time = timeValue.match(/^(\d{2}):(\d{2})/);
+    if (!time) return ''; // Retorna vacío si el formato es incorrecto
+
+    let hours = parseInt(time[1], 10);
+    const minutes = time[2];
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Convertir '0' horas a '12'
+
+    return `${hours}:${minutes} ${ampm}`;
+}
+																</script>
 															</div>
 														</div>
 													</div>
@@ -1872,9 +2063,12 @@
 																	<p>Disminuye grasa acumulada</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Corporal | Silueta definida', '1hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1908,9 +2102,12 @@
 																	<p>Proporciona una piel más flexible</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Corporal | Tratamiento antiestrias', '1hr')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1939,13 +2136,17 @@
 																</div>
 																<div class="qodef-m-content" style="font-size: 15px;">
 																	<p>Mejora el volumen y firmeza de la piel</p>
-																	<p>Brinda una mejor apariencia y textura a la pile</p>
+																	<p>Brinda una mejor apariencia y textura a la pile
+																	</p>
 																	<p>Proporciona un efecto reafirmante</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Corporal | Reafirmante de mamas y glúteos', '1hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -1980,9 +2181,12 @@
 																	<p>Previene aparicion de estrias</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Corporal | Tratamiento anticelulítico', '1hr 30 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -2012,13 +2216,17 @@
 																<div class="qodef-m-content" style="font-size: 15px;">
 																	<p>Favorece la circulación venosa</p>
 																	<p>Relajación muscular</p>
-																	<p>Disminuye la hinchazón y pesadez de la piernas</p>
+																	<p>Disminuye la hinchazón y pesadez de la piernas
+																	</p>
 																	<p>Desinflama y descongestiona</p>
 																</div>
 																<div class="qodef-m-button clear">
-																	<a style="background-color: #4e897d;" class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-																		href="#" target="_self"> <span
-																			class="qodef-m-text">Agendar</span></a>
+																	<a onclick="openModal('Corporal | Tratamiento para piernas cansadas', '45 min')"
+																		style="background-color: #4e897d;"
+																		class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
+																		href="javascript:void(0);"> <span
+																			class="qodef-m-text">Agendar</span>
+																	</a>
 																</div>
 															</div>
 														</div>
