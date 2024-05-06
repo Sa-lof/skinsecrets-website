@@ -1528,10 +1528,10 @@
 					<div class="qodef-widget-holder qodef--one">
 						<div class="widget widget_block" data-area="home-2-header-widget">
 							<p class="widget-phone"><a style="color: #4e897d; font-family: Open Sans; font-size: 22px;"
-									href="#">55 7867 1227</a></p>
-							<p class="widget-phone"><a href="#"><span class="__cf_email__"
-										data-cfemail="1c78796e717d7f70797d6e5c79647d716c7079327f7371">dra.cc0606@gmail.com</span></a>
-							</p>
+								href="https://api.whatsapp.com/send?phone=+525578671227&text=Hola! Quisiera tener informes sobre..." target="_blank">55 7867 1227</a></p>
+								<p class="widget-phone">
+									<a href="mailto:dra.cc0606@gmail.com">dra.cc0606@gmail.com</a>
+								</p>
 						</div>
 					</div>
 				</div>
@@ -2384,52 +2384,22 @@
 																		class="wpcf7-form-control wpcf7-text wpcf7-select wpcf7-validates-as-required"
 																		aria-required="true" aria-invalid="false"
 																		name="service-options">
-																		<option value="">Seleccione un servicio...
-																		</option>
-																		<option value="Facial | Limpieza
-																		profunda">Facial | Limpieza
-																			profunda</option>
-																		<option value="Facial | Facial para
-																		Acné">Facial | Facial para
-																			Acné</option>
-																		<option value="Facial | Facial Piel
-																		Sensible">Facial | Facial Piel
-																			Sensible</option>
-																		<option value="Facial | Hidratación
-																		Profunda">Facial | Hidratación
-																			Profunda</option>
-																		<option value="Facial | Antimanchas">Facial | Antimanchas
-																		</option>
-																		<option value="Facial | Antiedad">Facial | Antiedad
-																		</option>
-																		<option value="Facial | Facial Plus
-																		Lifting">Facial | Facial Plus
-																			Lifting</option>
-																		<option value="Facial | Facial
-																		Lifting para Caballero">Facial | Facial
-																			Lifting para Caballero</option>
-																		<option value="Comporal |
-																		Tratamiento Perfilante">Comporal |
-																			Tratamiento Perfilante</option>
-																		<option value="Comporal | Silueta
-																		Definida">Comporal | Silueta
-																			Definida</option>
-																		<option value="Comporal | Anti -
-																		Estrías">Comporal | Anti -
-																			Estrías</option>
-																		<option value="Comporal | Anti -
-																		Celulitis">Comporal | Anti -
-																			Celulitis</option>
-																		<option value="Comporal |
-																		Reafirmante de mamas y glúteos">Comporal |
-																			Reafirmante de mamas y glúteos</option>
-																		<option value="Comporal | Piernas
-																		Cansadas">Comporal | Piernas
-																			Cansadas</option>
-																		<option value="Comporal | Drenaje
-																		Linfático">Comporal | Drenaje
-																			Linfático</option>
-																		<!-- Agrega más opciones según sea necesario -->
+																		<option value="">Seleccione un servicio...</option>
+																		<option value="Facial | Limpieza profunda">Facial | Limpieza profunda</option>
+																		<option value="Facial | Facial para Acné">Facial | Facial para Acné</option>
+																		<option value="Facial | Facial Piel Sensible">Facial | Facial Piel Sensible</option>
+																		<option value="Facial | Hidratación Profunda">Facial | Hidratación Profunda</option>
+																		<option value="Facial | Antimanchas">Facial | Antimanchas</option>
+																		<option value="Facial | Antiedad">Facial | Antiedad</option>
+																		<option value="Facial | Facial Plus Lifting">Facial | Facial Plus Lifting</option>
+																		<option value="Facial | Facial Lifting para Caballero">Facial | Facial Lifting para Caballero</option>
+																		<option value="Comporal | Tratamiento Perfilante">Comporal | Tratamiento Perfilante</option>
+																		<option value="Comporal | Silueta Definida">Comporal | Silueta Definida</option>
+																		<option value="Comporal | Anti - Estrías">Comporal | Anti - Estrías</option>
+																		<option value="Comporal | Anti - Celulitis">Comporal | Anti - Celulitis</option>
+																		<option value="Comporal | Reafirmante de mamas y glúteos">Comporal | Reafirmante de mamas y glúteos</option>
+																		<option value="Comporal | Piernas Cansadas">Comporal | Piernas Cansadas</option>
+																		<option value="Comporal | Drenaje Linfático">Comporal | DrenajeLinfático</option>
 																	</select>
 																</span>
 															</div>
@@ -2442,7 +2412,8 @@
 																		placeholder="Hora de la cita">
 																</span>
 															</div>
-															<div class="qodef-newsletter-form-input" style="padding-top: 45px;">
+															<div class="qodef-newsletter-form-input"
+																style="padding-top: 45px;">
 																<span class="wpcf7-form-control-wrap"
 																	data-name="your-date">
 																	<input type="date" name="your-date"
@@ -2512,7 +2483,7 @@
 												const service = document.querySelector('select[name="service-options"]').value;
 												const date = document.querySelector('input[name="your-date"]').value;
 												const rawTime = document.querySelector('input[name="your-time"]').value;
-    											const time = formatTime(rawTime);
+												const time = formatTime(rawTime);
 
 												// Verifica que todos los campos necesarios estén llenos
 												if (!name || !service || !time || !date) {
@@ -2534,17 +2505,17 @@
 											}
 
 											function formatTime(timeValue) {
-    const time = timeValue.match(/^(\d{2}):(\d{2})/);
-    if (!time) return ''; // Retorna vacío si el formato es incorrecto
+												const time = timeValue.match(/^(\d{2}):(\d{2})/);
+												if (!time) return ''; // Retorna vacío si el formato es incorrecto
 
-    let hours = parseInt(time[1], 10);
-    const minutes = time[2];
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // Convertir '0' horas a '12'
+												let hours = parseInt(time[1], 10);
+												const minutes = time[2];
+												const ampm = hours >= 12 ? 'PM' : 'AM';
+												hours = hours % 12;
+												hours = hours ? hours : 12; // Convertir '0' horas a '12'
 
-    return `${hours}:${minutes} ${ampm}`;
-}
+												return `${hours}:${minutes} ${ampm}`;
+											}
 										</script>
 									</div>
 								</section>
@@ -2652,10 +2623,16 @@
 																			<div class="qodef-e-content">
 																				<h4 itemprop="description"
 																					class="qodef-e-text"
-																					style="color: white;">¡Increíble experiencia con el servicio! Después de recibir un tratamiento facial, mi piel se siente mucho mejor. ¡Definitivamente volveré por más sesiones!</h4>
+																					style="color: white;">¡Increíble
+																					experiencia con el servicio! Después
+																					de recibir un tratamiento facial, mi
+																					piel se siente mucho mejor.
+																					¡Definitivamente volveré por más
+																					sesiones!</h4>
 																				<h6 class="qodef-e-author">
 																					<span class="qodef-e-author-name"
-																						style="color: white;">María G</span>
+																						style="color: white;">María
+																						G</span>
 																					<span
 																						class="qodef-info-separator-single"></span>
 																					<span class="qodef-e-author-job"
@@ -2669,10 +2646,15 @@
 																			<div class="qodef-e-content">
 																				<h4 itemprop="description"
 																					class="qodef-e-text"
-																					style="color: white;">¡Excelente atención al cliente y resultados sorprendentes! Mi piel ha mejorado notablemente desde que comencé a venir aquí.</h4>
+																					style="color: white;">¡Excelente
+																					atención al cliente y resultados
+																					sorprendentes! Mi piel ha mejorado
+																					notablemente desde que comencé a
+																					venir aquí.</h4>
 																				<h6 class="qodef-e-author">
 																					<span class="qodef-e-author-name"
-																						style="color: white;">Paola T.</span>
+																						style="color: white;">Paola
+																						T.</span>
 																					<span
 																						class="qodef-info-separator-single"></span>
 																					<span class="qodef-e-author-job"
@@ -2686,10 +2668,15 @@
 																			<div class="qodef-e-content">
 																				<h4 itemprop="description"
 																					class="qodef-e-text"
-																					style="color: white;">Soy cliente regular y siempre salgo de aquí con una piel más saludable. Los productos que utilizan son de alta calidad.</h4>
+																					style="color: white;">Soy cliente
+																					regular y siempre salgo de aquí con
+																					una piel más saludable. Los
+																					productos que utilizan son de alta
+																					calidad.</h4>
 																				<h6 class="qodef-e-author">
 																					<span class="qodef-e-author-name"
-																						style="color: white;">Tania M.</span>
+																						style="color: white;">Tania
+																						M.</span>
 																					<span
 																						class="qodef-info-separator-single"></span>
 																					<span class="qodef-e-author-job"
@@ -2776,7 +2763,7 @@
 			</div>
 		</div>
 		<footer id="qodef-page-footer" role="contentinfo">
-			<div id="qodef-page-footer-top-area">
+			<div id="qodef-page-footer-top-area" style="background-color: #4e897d;">
 				<div id="qodef-page-footer-top-area-inner" class="qodef-content-grid">
 					<div
 						class="qodef-grid qodef-layout--columns qodef-responsive--custom qodef-col-num--4 qodef-col-num--1024--2 qodef-col-num--768--2 qodef-col-num--680--1 qodef-col-num--480--1">
@@ -2840,7 +2827,8 @@
 										<ul id="menu-footer-menu" class="menu">
 											<li id="menu-item-1205"
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1205">
-												<a href="#"><span class="qodef-menu-item-text">Inicio</span></a>
+												<a href="#"><span
+														class="qodef-menu-item-text">Inicio</span></a>
 											</li>
 											<li id="menu-item-1206"
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1206">
@@ -2859,8 +2847,7 @@
 											</li>
 											<li id="menu-item-1209"
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1209">
-												<a href="./contact-us/index.html"><span
-														class="qodef-menu-item-text">Contacto</span></a>
+												<a href="./contact-us/index.html"><span class="qodef-menu-item-text">Contacto</span></a>
 											</li>
 										</ul>
 									</div>
@@ -2883,19 +2870,20 @@
 								</div>
 								<div id="block-17" class="widget widget_block widget_text"
 									data-area="qodef-footer-top-area-column-3">
-									<p><a rel="noreferrer noopener" href="#" target="_blank">Lorem ipsum lorem ipsum
-											lorem ipsum lorem ipsum</a></p>
+									<p>Somos Diferentes, Somos Únicos, Somos Especiales Y Especializados</p>
 								</div>
 								<div id="block-20" class="widget widget_block widget_text"
 									data-area="qodef-footer-top-area-column-3">
-									<p><a href="#">
-											<span class="__cf_email__"
-												data-cfemail="a7c3c2d5cac6c4cbc2c6d5e7c2dfc6cad7cbc289c4c8ca">dra.cc0606@gmail.com</span>
-										</a></p>
+									<p class="widget-phone">
+										<a href="mailto:dra.cc0606@gmail.com">dra.cc0606@gmail.com</a>
+									</p>
 								</div>
 								<div id="block-21" class="widget widget_block widget_text"
 									data-area="qodef-footer-top-area-column-3">
-									<p><a href="#"> 0036 663 996 552 </a></p>
+									<p class="widget-phone"><a
+											style="color: #cccccc; font-family: Open Sans; font-size: 16px;"
+											href="https://api.whatsapp.com/send?phone=+525578671227&text=Hola! Quisiera tener informes sobre..."
+											target="_blank">55 7867 1227</a></p>
 								</div>
 								<div id="dermaclear_core_social_icons_group-13"
 									class="widget widget_dermaclear_core_social_icons_group"
@@ -2953,7 +2941,7 @@
 														<p class="qodef-e-time">13:00 - 19:00</p>
 													</div>
 													<div class="qodef-working-hours-item qodef-e">
-														<h5 class="qodef-e-day">Sábado </h5>
+														<h5 class="qodef-e-day">Domingo </h5>
 														<div class="qodef-e-line"></div>
 														<p class="qodef-e-time">Cerrado</p>
 													</div>
@@ -2995,8 +2983,8 @@
 							<div class="qodef-grid-item">
 								<div id="block-24" class="widget widget_block widget_text"
 									data-area="qodef-footer-bottom-area-column-1">
-									<p>© Copyright 2024 <a rel="noreferrer noopener" href="#" target="_blank">by Amoxtli
-											Web Developers</a></p>
+									<p>© Copyright 2024 <a rel="noreferrer noopener" href="https://amoxtli.tech/"
+											target="_blank">by Amoxtli Web Developers</a></p>
 								</div>
 							</div>
 						</div>
